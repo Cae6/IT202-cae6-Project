@@ -13,6 +13,7 @@
             <ul>
                 <li><a class="active" href="home.php">HOME</a></li>
                 <li><a href="ship.php">SHIPPING</a></li>
+                <li><a href="product.php">PRODUCTS</a></li>
             </ul>
         </nav>
     </header>
@@ -59,6 +60,13 @@
         <p>Chizorom Ekweghariri   2/16/2024   IT202-006  cae6@njit.edu </p>
 </h6>
 </footer>
+<!-- 
+    Chizorom Ekweghariri
+    3/1/2024
+    IT202-006
+    Phase 2 Assignment 
+    cae6@njit.edu
+ -->
 </body>
 
 </html>

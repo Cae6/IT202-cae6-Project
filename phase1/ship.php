@@ -25,6 +25,7 @@
         <ul>
             <li><a href="home.php">HOME</a></li>
             <li><a class= "active" href="ship.php">SHIPPING</a></li>
+            <li><a  href="product.php">PRODUCTS</a></li>
         </ul>
     </div>
 
@@ -63,3 +64,11 @@
 </footer>
 </body>
 </html>
+<!-- 
+    Chizorom Ekweghariri
+    3/1/2024
+    IT202-006
+    Phase 2 Assignment 
+    cae6@njit.edu
+ -->
+ 

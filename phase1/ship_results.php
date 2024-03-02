@@ -64,7 +64,7 @@
     if($error_message != '') {
         // Output the error message and exit
         echo $error_message;
-        exit(); // This line should be placed here
+        exit(); 
     }
 ?>
 
@@ -119,6 +119,13 @@
 </h6>
 </footer>
 </html>
+<!-- 
+    Chizorom Ekweghariri
+    3/1/2024
+    IT202-006
+    Phase 2 Assignment 
+    cae6@njit.edu
+ -->
 
 
 
