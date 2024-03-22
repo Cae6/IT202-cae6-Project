@@ -53,6 +53,7 @@ $statement3->closeCursor();
             <li><a href="home.php">HOME</a></li>
             <li><a href="ship.php">SHIPPING</a></li>
             <li><a class= "active" href="product.php">PRODUCTS</a></li>
+            <li><a href="add_product_form.php">ADD PRODUCTS</a></li>
         </ul>
     </div>
 <!-- the body section -->
@@ -101,6 +102,7 @@ $statement3->closeCursor();
       </tr>
       <?php endforeach; ?>      
     </table>
+    <p><a href="add_product_form.php">Add Product</a></p>
   </section>
 </main>  
 <footer>

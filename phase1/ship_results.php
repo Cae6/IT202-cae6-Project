@@ -103,7 +103,7 @@
         <span><?php echo htmlspecialchars($price); ?></span><br>
         <h4> Tracking Number: 8279744038038 </h4><br>
         <h3>Barcode</hr>
-        <img src="barcode.png" alt="Barcode" width="260" height="145">
+        <img src="images/barcode.png" alt="Barcode" width="260" height="145">
         <h3> Dimensions:</h3>
         <label>Length:</label>
         <span><?php echo htmlspecialchars($length); ?></span><br>
