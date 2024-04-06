@@ -1,7 +1,7 @@
 <!-- Slide 25 -->
 <html>
   <head>
-    <title>My Guitar Shop</title>
+    <title>Chizi's Home Dec Shop</title>
   </head>
   <body>
     <main>

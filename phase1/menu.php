@@ -1,0 +1,26 @@
+
+<html>
+<body>
+<?php 
+ session_start();
+ if (isset($_SESSION['is_valid_admin'])) { 
+
+?>
+   <p>
+     <a href="logout.php">Logout</a>
+   </p>
+ <?php } else { ?>
+   <p>
+     <a href="login.php">Login</a>
+   </p>
+ <?php } ?>
+</body>
+</html>
+
+<!-- 
+    Chizorom Ekweghariri
+    4/5/2024
+    IT202-006
+    Phase 4 Assignment 
+    cae6@njit.edu
+ -->

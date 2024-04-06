@@ -21,14 +21,44 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div id="navigation">
-        <ul>
-            <li><a href="home.php">HOME</a></li>
-            <li><a class= "active" href="ship.php">SHIPPING</a></li>
-            <li><a href="product.php">PRODUCTS</a></li>
-            <li><a href="add_product_form.php">ADD PRODUCTS</a></li>
-        </ul>
-    </div>
+    <header>
+    <nav>
+  <?php
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+  if (isset($_SESSION['is_valid_admin'])) {
+  ?>
+    <ul>
+        <li><a href="home.php">HOME</a></li>
+        <li><a class="active" href="ship.php">SHIPPING</a></li>
+        <li><a href="product.php">PRODUCTS</a></li>
+    
+        <li><a href="add_product_form.php">ADD PRODUCTS</a></li>
+    </ul>
+    <a href="logout.php">Logout</a>
+    <?php 
+     echo ("<br>");
+     echo("Welcome");
+     echo ("<br>");
+     echo $_SESSION['firstN'];
+     echo ("<br>");
+     echo $_SESSION['lastN'];
+     echo ("<br>");
+     echo $_SESSION['emailA'];
+     echo ("<br>"); ?>
+  <?php 
+  } else {
+  ?>
+    <a class="active" href="home.php">HOME</a>
+    <a href="product2.php">PRODUCTS</a>
+    <a href="login.php">Login</a>
+  <?php 
+  } 
+  ?>
+</nav>
+        
+    </header>
 
     <form action="ship_results.php" method="post">
         <label>First name:</label>

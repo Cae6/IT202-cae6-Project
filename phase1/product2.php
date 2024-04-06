@@ -1,4 +1,7 @@
 <?php
+
+  echo('You need to login to view the PRODUCTS, SHIPPING and the ADD PRODUCT page ');
+
 // TODO use database_local.php OR database_njit.php
 require_once('database_njit.php');
 
@@ -47,42 +50,46 @@ $statement3->closeCursor();
     <meta charset="UTF-8">
     <title>Shipping Page</title>
     <link rel="stylesheet" href="style.css">
-    <body>
-    <header>
+</head>
+    <div id="navigation">
+        <ul>
+            <li><a href="home.php">HOME</a></li>
+            <li><a class= "active" href="product.php">PRODUCTS</a></li>
+            <li><a href="login.php">LOGIN</a><li>
+        </ul>
+        <?php 
+ session_start();
+ if (isset($_SESSION['is_valid_admin'])) { 
+
+?>
+   <p>
+     <a href="logout.php">Logout</a>
+   </p>
+ <?php } else { ?>
+   <p>
+     <a href="login.php">Login</a>
+   </p>
+ <?php } ?>
+    </div>
+<!-- the body section -->
+<body>
+<main>
+  <h1>Product List</h1>
+  <aside >
+    <!-- display a list of categories -->
+    <h2>Categories</h2>
     <nav>
-  <?php
-  if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-  }
-  if (isset($_SESSION['is_valid_admin'])) {
-  ?>
     <ul>
-        <li><a href="home.php">HOME</a></li>
-        <li><a href="ship.php">SHIPPING</a></li>
-        <li><a class="active" href="product.php">PRODUCTS</a></li>
-        <li><a href="add_product_form.php">ADD PRODUCTS</a></li>
+      <?php foreach ($categories as $category) : ?>
+      <li>
+        <a href="?category_id=<?php 
+            echo $category['HomeDecCategoryID']; 
+            ?>">
+          <?php echo $category['HomeDecCategoryName']; ?></a>
+      </li>
+      <?php endforeach; ?>
     </ul>
-    <a href="logout.php">Logout</a>
-    <?php 
-     echo ("<br>");
-     echo("Welcome");
-     echo ("<br>");
-     echo $_SESSION['firstN'];
-     echo ("<br>");
-     echo $_SESSION['lastN'];
-     echo ("<br>");
-     echo $_SESSION['emailA'];
-     echo ("<br>"); ?>
-  <?php 
-  } else {
-  ?>
-    <a class="active" href="home.php">HOME</a>
-    <a class="active" href="product2.php">PRODUCTS</a>
-    <a href="login.php">Login</a>
-  <?php 
-  } 
-  ?>
-</nav>
+    </nav>       
   </aside>
 
   <section>
@@ -106,15 +113,6 @@ $statement3->closeCursor();
         <td><?php echo $product['description']; ?></td>
         <td><?php echo $product['price']; ?></td>
         <td><?php echo $product['ColorTheme']; ?></td>
-        <td>
-          <form action="delete_product.php" method="post">
-            <input type="hidden" name="product_id"
-              value="<?php echo $product['HomeDecID']; ?>" />
-            <input type="hidden" name="category_id"
-              value="<?php echo $product['HomeDecCategoryID']; ?>" />
-            <input type="submit" value="Delete" />
-          </form>
-        </td>
         
       </tr>
       <?php endforeach; ?>      
@@ -136,4 +134,3 @@ $statement3->closeCursor();
     Phase 4 Assignment 
     cae6@njit.edu
  -->
- 
