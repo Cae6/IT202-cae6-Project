@@ -76,21 +76,23 @@ $statement->closeCursor();
             </select>
             <br>
             <label>Code:</label>
-            <input type="text" name="code"><br>
+            <input type="text" id="code" name="code" placeholder="Enter 4 -10 Characters"><p>*</p><br>
 
             <label>Name:</label>
-            <input type="text" name="name"><br>
+            <input type="text" id= "name" name="name" placeholder= "Add a name 10-100"><p>*</p><br>
 
             <label>Description:</label> 
-            <textarea name="description"></textarea><br>
+            <textarea name="description" id="description" placeholder= "Add a Description" ></textarea><p>*</p><br>
 
             <label>List Price:</label>
-            <input type="text" name="price"><br>
+            <input type="text" id="price" name="price" placeholder="Enter a price"><p>*</p><br>
 
             <label>Color Theme:</label>
-            <input type="text" name="colorTheme"><br>
+            <input type="text" id= "coloTheme" name="colorTheme" placeholder="Enter a Color Theme"><p>*</p><br>
 
-            <input type="submit" value="Add Product"><br>
+            <input type="submit" value="Add Product"><br> <br>
+
+            <input type= "reset" value="RESET FORM" id="reset_button" /><br>
         </form>
         <p><a href="product.php">View Product List</a></p>
     </main>
@@ -99,6 +101,8 @@ $statement->closeCursor();
         <p>&copy; <?php echo date('Y'); ?> Chizi's Home Dec Store, Inc.</p>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script src="add_product_form.js"></script>
 </html>
 <!-- 
     Chizorom Ekweghariri

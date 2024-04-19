@@ -84,6 +84,23 @@ $statement3->closeCursor();
   ?>
 </nav>
   </aside>
+  <h1>Product List</h1>
+  <aside >
+    <!-- display a list of categories -->
+    <h2>Categories</h2>
+    <nav>
+    <ul>
+      <?php foreach ($categories as $category) : ?>
+      <li>
+        <a href="?category_id=<?php 
+            echo $category['HomeDecCategoryID']; 
+            ?>">
+          <?php echo $category['HomeDecCategoryName']; ?></a>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+    </nav>       
+  </aside>
 
   <section>
     <!-- display a table of products -->
@@ -101,7 +118,12 @@ $statement3->closeCursor();
 
       <?php foreach ($HomeDec as $product) : ?>
       <tr>
-        <td><?php echo $product['HomeDecCode']; ?></td>
+        <td>
+        <a href="product_details.php?product_id=<?php echo $product['HomeDecID']; ?>">
+            <?php echo $product['HomeDecCode']; ?>
+        </a>
+    </td>
+        
         <td><?php echo $product['HomeDecName']; ?></td>
         <td><?php echo $product['description']; ?></td>
         <td><?php echo $product['price']; ?></td>
@@ -112,7 +134,7 @@ $statement3->closeCursor();
               value="<?php echo $product['HomeDecID']; ?>" />
             <input type="hidden" name="category_id"
               value="<?php echo $product['HomeDecCategoryID']; ?>" />
-            <input type="submit" value="Delete" />
+            <input type="submit" value="Delete" onclick="return confirmDelete();"/>
           </form>
         </td>
         
@@ -127,6 +149,13 @@ $statement3->closeCursor();
         <p>Chizorom Ekweghariri   3/1/2024   IT202-006  cae6@njit.edu </p>
 </h6>
 </footer>
+
+<script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this item?");
+    }
+    </script>
+
 </body>
 </html>
 <!-- 

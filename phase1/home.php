@@ -39,11 +39,14 @@
   <ul>
   <li><a class="active" href="home.php">HOME</a></li>
   <li><a href="product2.php">PRODUCTS</a></li>
+  <li><a href="ship2.php">SHIPPING</a></li>
+  <li><a href="add_product_forms2.php">ADD PRODUCTS</a></li>
   <li><a href="login.php">LOGIN</a></li>
     </ul>
   <?php 
   } 
   ?>
+  <a href="login.php">Login</a>
 </nav>
         
     </header>

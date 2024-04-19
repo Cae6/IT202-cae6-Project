@@ -1,6 +1,7 @@
-<?php
 
-  echo('You need to login to view the PRODUCTS, SHIPPING and the ADD PRODUCT page ');
+<?php
+    
+  echo('You need to login to delete products and access the SHIPPING and the ADD PRODUCT page ');
 
 // TODO use database_local.php OR database_njit.php
 require_once('database_njit.php');
@@ -53,9 +54,11 @@ $statement3->closeCursor();
 </head>
     <div id="navigation">
         <ul>
-            <li><a href="home.php">HOME</a></li>
-            <li><a class= "active" href="product.php">PRODUCTS</a></li>
-            <li><a href="login.php">LOGIN</a><li>
+        <li><a  href="home.php">HOME</a></li>
+  <li><a class="active" href="product2.php">PRODUCTS</a></li>
+  <li><a href="ship2.php">SHIPPING</a></li>
+  <li><a href="add_product_forms2.php">ADD PRODUCTS</a></li>
+  <li><a href="login.php">LOGIN</a></li>
         </ul>
         <?php 
  session_start();

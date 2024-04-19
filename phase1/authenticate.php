@@ -9,6 +9,17 @@
     $_SESSION['is_valid_admin'] = true;
     // redirect logged in user to default page
     echo "<p>You have successfully logged in.</p>";
+    $queryCategory = 'SELECT firstName,lastName, emailAddress FROM HomeDecManagers
+          WHERE emailAddress = :email';
+    $statement1 = $db->prepare($queryCategory);
+    $statement1->bindValue(':email', $email);
+    $statement1->execute();
+    $manager = $statement1->fetch();
+    $statement1->closeCursor();
+
+    $_SESSION['firstN'] = $manager['firstName'];
+    $_SESSION['lastN'] = $manager['lastName'];
+    $_SESSION['emailA'] = $manager['emailAddress'];
   } else {
   if ($email == NULL && $password == NULL) {
     $login_message ='You must login to view all pages.';
@@ -17,17 +28,7 @@
   }
     include('login.php');
   }
-  $queryCategory = 'SELECT firstName,lastName, emailAddress FROM HomeDecManagers
-          WHERE emailAddress = :email';
-$statement1 = $db->prepare($queryCategory);
-$statement1->bindValue(':email', $email);
-$statement1->execute();
-$manager = $statement1->fetch();
-$statement1->closeCursor();
-
-$_SESSION['firstN'] = $manager['firstName'];
-$_SESSION['lastN'] = $manager['lastName'];
-$_SESSION['emailA'] = $manager['emailAddress'];
+  
 
 include('home.php');
 

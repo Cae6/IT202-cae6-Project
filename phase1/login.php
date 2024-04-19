@@ -39,8 +39,10 @@ $login_message = 'You need to login to view the PRODUCTS, SHIPPING and the ADD P
   } else {
   ?>
   <ul>
-  <li><a href="home.php">HOME</a></li>
+  <li><a  href="home.php">HOME</a></li>
   <li><a href="product2.php">PRODUCTS</a></li>
+  <li><a href="ship2.php">SHIPPING</a></li>
+  <li><a href="add_product_forms2.php">ADD PRODUCTS</a></li>
   <li><a class="active" href="login.php">LOGIN</a></li>
     </ul>
   <?php 

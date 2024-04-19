@@ -7,9 +7,9 @@ body {
 
 main {
     width: 80%;
-    margin: 20px auto;
+    margin: 10px auto;
     background-color: #56372b;
-    padding: 21px;
+    padding: 0px;
     border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -17,10 +17,12 @@ main {
 h1 {
     color: #333;
     text-align: center;
+    margin-top: 0; 
+    margin-bottom: 10px; 
 }
 
 .shipping-info p {
-    margin: 20px 0;
+    margin: 10px 0;
     color: #555;
 }
 
@@ -35,6 +37,7 @@ label {
 
 footer{
     font-family: 'Courier New', Courier, monospace, sans-serif;
+    padding: 10px;
 
 }
 
@@ -79,7 +82,7 @@ figure {
     background-color: black;
     color: white;
     font-style: bold;
-    padding: 2px;
+    padding: px;
     text-align: center;
   }
 
